@@ -115,7 +115,6 @@ while [[ $# -gt 0 ]]; do
 		-help) help 0 ;;
 		*) echo -e "\n  [ \e[1;31m✕\e[0m ] Unknown argument: $1\e[0m" >&2; help 1 ;;
 	esac
-	shift
 done
 
 # SOURCE SELECTED CONFIG
