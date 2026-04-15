@@ -153,8 +153,8 @@ download_server() {
 			echo -e "  [ \e[1;31m✕\e[0m ] Error while downloading server.jar."
 		fi
 	elif [[ $JDKversion -eq 21 ]]; then
-		echo -e "\n\e[38;5;70mDownloading official server.jar (1.21.5):\e[0m"
-		if wget https://piston-data.mojang.com/v1/objects/e6ec2f64e6080b9b5d9b471b291c33cc7f509733/server.jar -O "$HOME/server_mc/server/server.jar" &>/dev/null; then
+		echo -e "\n\e[38;5;70mDownloading official server.jar (1.21.11):\e[0m"
+		if wget https://piston-data.mojang.com/v1/objects/64bb6d763bed0a9f1d632ec347938594144943ed/server.jar -O "$HOME/server_mc/server/server.jar" &>/dev/null; then
 			echo -e "  [ \e[1;32m✓\e[0m ] Done - downloaded."
 		else
 			echo -e "  [ \e[1;31m✕\e[0m ] Error while downloading server.jar."

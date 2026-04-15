@@ -271,7 +271,7 @@ if $SERVER_DATAPACKS; then
 		mkdir -p "$DATAPACKS_DIR"
 	fi
 	mkdir -p "$SERVER_DIR/datapacks/"
-	cp -r "$SERVER_DIR/datapacks/"* "$DATAPACKS_DIR"/
+	cp -r "$SERVER_DIR/datapacks/"* "$DATAPACKS_DIR"/ 2>/dev/null || true # return true so the code doesn't break on an empty/nonexistent directory
 fi
 # CHECK IF SERVER JAR EXISTS
 if [ ! -f "$SERVER_DIR/server/server.jar" ]; then
@@ -292,7 +292,7 @@ check_version() {
     if [[ "$java_version" =~ openjdk\ 17\.* ]]; then
 		local MAX_VERSION="1.20.4"
 	elif [[ "$java_version" =~ openjdk\ 21\.* ]]; then
-		local MAX_VERSION="1.25.0" # Big number to prevent script fail with next versions
+		local MAX_VERSION="99.99.99" # Big number to prevent script fail with next versions
 	fi
 	local MC_VERSION
 	MC_VERSION="$(unzip -p "$SERVER_DIR/server/server.jar" version.json | jq -r .name 2>/dev/null)"

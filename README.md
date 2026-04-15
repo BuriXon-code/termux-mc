@@ -156,7 +156,7 @@ This project is designed for **Termux on Android** and supports:
 
 - **Minecraft Java Edition** (official `server.jar`)
 - JDK **17** – compatible with Minecraft up to version 1.20.4  
-- JDK **21** – supports newer Minecraft versions (e.g. 1.21.5+)
+- JDK **21** – supports newer Minecraft versions (e.g. 1.21.11+)
 
 ### Required components
 
